@@ -1,5 +1,7 @@
 INSTRUCTIONS
 ============
+With our handy tool, you can effortlessly generate themes for your WaveMaker web apps. Not only that, but you can also make dynamic theme changes during runtime, saving you time and effort. It's a simple yet effective way to enhance the look and feel of your web applications.
+
 
 Install Prerequisites
 --------
@@ -37,7 +39,7 @@ Setup WaveMaker Theme Repository
 To clone the wavemaker-theme repository, use git clone:
 
 <pre>
- git clone https://github.com/wavemaker/wavemaker-theme.git
+ git clone https://github.com/wm-igniters/wavemaker/wavemaker-theme.git
  cd wavemaker-theme
  npm install
 </pre>
