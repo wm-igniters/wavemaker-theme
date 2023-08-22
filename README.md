@@ -1,5 +1,7 @@
 INSTRUCTIONS
 ============
+A tool to create themes for WaveMaker web apps, allowing for dynamic theme changes at runtime.
+
 
 Install Prerequisites
 --------
