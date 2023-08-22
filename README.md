@@ -1,6 +1,6 @@
 INSTRUCTIONS
 ============
-A tool to create themes for WaveMaker web apps, allowing for dynamic theme changes at runtime.
+With our handy tool, you can effortlessly generate themes for your WaveMaker web apps. Not only that, but you can also make dynamic theme changes during runtime, saving you time and effort. It's a simple yet effective way to enhance the look and feel of your web applications.
 
 
 Install Prerequisites
