@@ -66,17 +66,17 @@ Understanding the Repository
 
 Fonts
 -----
-The default font for css-variables.less (src/web) is Lexed font, which can be changed by importing the Google font API URL in the style directory (src/web/css-variables.less) and updating the font name to the **--font-family** variable.
+The default font for css-variables.less (src/web) is **Lexend** font, which can be changed by importing the Google font API URL in the style directory (src/web/css-variables.less) and updating the font name to the **--font-family** variable.
 
 
 Project Properties
 -----
-You can easily personalize your theme by changing its name. The default theme name is Material Default, but you can make it unique with a specified name. 
+You can easily personalize your theme by changing its name. The default theme name is **Material Default**, but you can make it unique with a specified name. 
 
 
 CSS Variables
 -----
-There will be references to all CSS variables in the css-variables.less(src/web) can update values to change the theme.
+The CSS variables are located in the css-variables.less file within the src/web directory and can be modified for customizing themes. 
 
 
 Build
