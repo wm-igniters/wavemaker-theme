@@ -31,15 +31,17 @@ $ npm install --g bower grunt-cli
 
 (Make sure above commands execute with sudo/administrator permissions depending on OS eg, UNIX)
 
+
 Setup WaveMaker Theme Repository
 --------
-To clone the grunt-wavemaker-theme repository, use git clone:
+To clone the wavemaker-theme repository, use git clone:
 
 <pre>
- git clone https://github.com/wavemaker/grunt-wavemaker-theme.git
- cd grunt-wavemaker-theme
+ git clone https://github.com/wavemaker/wavemaker-theme.git
+ cd wavemaker-theme
  npm install
 </pre>
+
 
 Understanding the Repository
 --------
@@ -48,10 +50,10 @@ Understanding the Repository
 |  +--web
 |     +--fonts/
 |     +--.wmproject.properties
-|     +--css-variable.less
+|     +--css-variables.less
 |     +--style.less
 |     +--theme.png
-|     +--variable.less
+|     +--variables.less
 +--dist
 |  +--web.zip
 +--Gruntfile.js
@@ -61,16 +63,32 @@ Understanding the Repository
 +--bower.json
 </pre>
 
+
 Fonts
 -----
-There will be references to Roboto regular fonts in the variables.less(src/web), to avail them please download Roboto regular fonts and paste them in fonts directory(src/web/fonts).
+The default font for css-variables.less (src/web) is Lexed font, which can be changed by importing the Google font API URL in the style directory (src/web/css-variables.less) and updating the font name to the **--font-family** variable.
+
+
+Project Properties
+-----
+You can easily personalize your theme by changing its name. The default theme name is Material Default, but you can make it unique with a specified name. 
+
+
+CSS Variables
+-----
+There will be references to all CSS variables in the css-variables.less(src/web) can update values to change the theme.
+
 
 Build
 --------
-To build the WaveMaker Theme run the below command from grunt-wavemaker-theme directory
+To build the WaveMaker Theme run the below command from wavemaker-theme directory
 
 <pre>
-cd grunt-wavemaker-theme
+cd wavemaker-theme
 grunt themes
 </pre>
+
+Run Time Theme change
+--------
+To change the theme during runtime, update the values for the specified CSS variables and append them to the root element.
 
