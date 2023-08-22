@@ -1,16 +1,15 @@
 html {
-  font-size: 100%;
+  font-size: 100%;/*to support rem based units calculation*/
 }
+/** import css variables fileto the root*/
 @import url("css-variables.less");
+/** import specified google font url ex:Lexend */
 @import (css) url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/*START - Flat Line Theme*/
+/*START - Re-write selectors with css variables with Flat Line Theme*/
 .wm-app {
 @import url("../../components/bootstrap/less/bootstrap.less");
 @import url("variables.less");
-//WM Variables
-@import url("wm-variables.less");
-@import url("icons.less");
 
 /** Editing the above @import lines are restricted. It will break the CSS. */
 /**  You can edit the styles from here. Note* Last entered code overrides your styles.*/
@@ -57,7 +56,6 @@ html {
     border-radius: @thumbnail-border-radius;
   }
 
-
   .h1,.h2,.h3,.h4,.h5,.h6,.p {
     width: 100%;
     display: block; //shift to product
@@ -66,9 +64,6 @@ html {
   .h1, .h2, .h3, .h4, .h5, .h6 {
       color: var(--headings-color);
   }
-  // .h1, h1, .h2, h2{
-  //   font-family: @headings-font-family;
-  // }
 
   * {
     &:not([hidden]):not(.ng-hide) {
@@ -103,23 +98,7 @@ html {
   /******Label: overiding the label class as bootstrap is making all the labels bold***/
   label {
     font-weight: var(--body-font-weight);
-    // margin-bottom: 0.38em;
     margin: 0;
-    // &:not([hidden]):not(.text-ellipsis):not(.ng-hide):not(.p):not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6) + label:not(div):not([hidden]):not(.text-ellipsis):not(.ng-hide):not(.p):not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6),
-    // &:not([hidden]):not(.text-ellipsis):not(.ng-hide):not(.p):not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6) + .wm-focus-rect + label:not(div):not([hidden]):not(.text-ellipsis):not(.ng-hide):not(.p):not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6){
-    //   margin-left: var(--label-2-label-spacing);//4px
-    // }
-    // &:not(div):not([hidden]):not(.text-ellipsis):not(.ng-hide):not(.p):not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6) + *:not(label):not(.wm-focus-rect):not(div):not([hidden]):not(.text-ellipsis):not(.ng-hide):not(.p):not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6){
-    //   margin-left: var(--label-next-any-spacing);//8px
-    // }
-    // &.p, &.h1, &.h2, &.h3, &.h4, &.h5, &.h6{
-    //   &:not(div):not([hidden]):not(.text-ellipsis):not(.ng-hide) + label, &:not(div):not([hidden]):not(.text-ellipsis):not(.ng-hide) + .wm-focus-rect + label{
-    //     margin-top: var(--label-below-spacing);//8px
-    //     &.h1{
-    //       margin-top: var(--widget-below-widget-spacing);//16px
-    //     }
-    //   }
-    // }
   }
 
   .label-primary {

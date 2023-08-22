@@ -13,9 +13,7 @@ module.exports = function (grunt) {
         themes_dist: 'dist',
         themes_fonts: 'components/bootstrap',
         themes_icons: 'components/wavicon',
-        web_zip : 'web.zip',
-        mobile_zip : 'mobile.zip',
-        bootswatch_zip : 'bootswatch.zip'
+        web_zip : 'web.zip'
     };
     // To generate compress config for themes
     var buildCompressConfig = function () {
@@ -66,28 +64,6 @@ module.exports = function (grunt) {
                     },
                     files: [
                         {'<%= config.themes_tmp %>/.wmproject.properties' : '<%= config.themes_tmp %>/web/.wmproject.properties'}
-                    ]
-                },
-                mobile: {
-                    options: {
-                        actions: [
-                            {type: 'R', xpath: '/properties/entry[@key="version"]', saveAs: 'mobile-version'},
-                            {type: 'R', xpath: '/properties/entry[@key="name"]', saveAs: 'mobile-name'}
-                        ]
-                    },
-                    files: [
-                        {'<%= config.themes_tmp %>/.wmproject.properties' : '<%= config.themes_tmp %>/mobile/.wmproject.properties'}
-                    ]
-                },
-                bootswatch: {
-                    options: {
-                        actions: [
-                            {type: 'R', xpath: '/properties/entry[@key="version"]', saveAs: 'bootswatch-version'},
-                            {type: 'R', xpath: '/properties/entry[@key="name"]', saveAs: 'bootswatch-name'}
-                        ]
-                    },
-                    files: [
-                        {'<%= config.themes_tmp %>/.wmproject.properties' : '<%= config.themes_tmp %>/bootswatch/.wmproject.properties'}
                     ]
                 }
             },
