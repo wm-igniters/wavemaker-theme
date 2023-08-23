@@ -39,7 +39,7 @@ Setup WaveMaker Theme Repository
 To clone the wavemaker-theme repository, use git clone:
 
 <pre>
- git clone https://github.com/wm-igniters/wavemaker/wavemaker-theme.git
+ git clone https://github.com/wm-igniters/wavemaker-theme.git
  cd wavemaker-theme
  npm install
 </pre>
