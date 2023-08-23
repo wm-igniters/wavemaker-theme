@@ -11,22 +11,22 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     /*----standard color variables------*/
     //primary
     --brand-primary:                    rgba(101, 109, 249, 1);
-    --brand-primary-lighten:            ~"color-mix(in srgb, var(--brand-primary), #fff 20%)";
-    --brand-primary-darken:             ~"color-mix(in srgb, var(--brand-primary), #000 30%)";
+    --brand-primary-lighten:            ~"color-mix(in srgb, var(--brand-primary), #ffffff 20%)";
+    --brand-primary-darken:             ~"color-mix(in srgb, var(--brand-primary), #000000 30%)";
     --brand-primary-o:                  ~"color-mix(in srgb, var(--brand-primary), transparent 88%)";
     --primary-bg-text:                  rgba(255, 255, 255, 1);
-    --primary-bg-gradient:              linear-gradient(257deg, ~"color-mix(in srgb, var(--brand-primary), #000 50%)", var(--brand-primary));
+    --primary-bg-gradient:              linear-gradient(257deg, ~"color-mix(in srgb, var(--brand-primary), #000000 50%)", var(--brand-primary));
     --primary-label-border:             rgba(255, 255, 255, 0.4);
 
     //secondary
     --brand-secondary:                  rgba(255, 150, 66, 1);
-    --brand-secondary-lighten:          ~"color-mix(in srgb, var(--brand-secondary), #fff 20%)";
-    --brand-secondary-darken:           ~"color-mix(in srgb, var(--brand-secondary), #000 30%)";
+    --brand-secondary-lighten:          ~"color-mix(in srgb, var(--brand-secondary), #ffffff 20%)";
+    --brand-secondary-darken:           ~"color-mix(in srgb, var(--brand-secondary), #000000 30%)";
     --brand-secondary-o:                ~"color-mix(in srgb, var(--brand-secondary), transparent 90%)";
     --brand-secondary2-o:               rgba(255, 111, 81, 0.1);
     --brand-secondary-dark:             rgba(250, 100, 50, 1);
     --secondary-bg-text:                rgba(255, 255, 255, 1);
-    --secondary-bg-gradient:            linear-gradient(253deg, ~"color-mix(in srgb, var(--brand-secondary), #000 30%)", var(--brand-secondary));
+    --secondary-bg-gradient:            linear-gradient(253deg, ~"color-mix(in srgb, var(--brand-secondary), #000000 30%)", var(--brand-secondary));
     --secondary-text-gradient:          var(--secondary-bg-gradient);
 
     //tertiary
@@ -76,12 +76,24 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --text-muted:                       rgba(31, 43, 87, 0.5);
     --text-invert:                      rgba(255, 255, 255, 1);
     --headings-color:                   rgba(31, 43, 87, 1);
+    --subheading-color:                 ~"color-mix(in srgb, var(--headings-color), transparent 60%)";
 
     //** Global textual link.
     --link-color:                       #2c5ccc;
-    --link-hover-color:                 ~"color-mix(in srgb, var(--link-color), #000 20%)";
+    --link-hover-color:                 ~"color-mix(in srgb, var(--link-color), #000000 20%)";
+
+    //** state colors
+    --state-primary-text:               var(--brand-primary);
+    --state-primary-bg:                 ~"color-mix(in srgb, var(--brand-primary), #ffffff 45%)";
+    --state-primary-border:             ~"color-mix(in srgb, var(--state-primary-bg), #000000 5%)";
+
+    --state-secondary-text:             var(--brand-secondary);
+    --state-secondary-bg:               ~"color-mix(in srgb, var(--brand-secondary), #ffffff 45%)";
+    --state-secondary-border:           ~"color-mix(in srgb, var(--state-secondary-bg), #000000 5%)";
+
 
     // common things
+    --white-space-normal:               nowrap;
     --filter-text:                      #171717;
     --active-text-muted:                rgba(23, 23, 23, 1);
     --active-text-muted-7:              rgba(23, 23, 23, 0.7);
@@ -95,12 +107,6 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --border-color:                     #ebebeb;
     --border-color-2:                   rgba(85, 79, 79, 0.2);
     --border-color-3:                   rgba(247, 247, 247, 0.2);
-    --grid-header-text-color:           #888888;
-    --grid-header-border:               #f2f2f2;
-    --grid-header-bg:                   linear-gradient(to top, #fbfbfb, #f4f4f4 19%);
-    --grid-border:                      #f0eaea;
-    --grid-text-color:                  #35363b;
-    --grid-text-muted-color:            #838383;
     --danger-bg-gradient:               linear-gradient(93deg, var(--brand-danger) 2%, var(--brand-danger2));
     --primary-text-gradient:            linear-gradient(143deg, var(--brand-primary) 50%, var(--brand-primary-darken) 105%);
     --tabs-border-gradient:             linear-gradient(92deg, var(--brand-primary) 50%, var(--brand-primary-darken) 95%);
@@ -145,8 +151,10 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --font-weight-bold:                 700;
     --font-weight-extrabold:            800;
     --font-weight-black:                900;
+    --headings-font-family:              var(--font-family), var(--font-family-backup);
 
     //fonts weight
+    --headings-font-weight:             var(--font-weight-regular);
     --h1-font-weight:                   var(--font-weight-semibold);
     --h2-font-weight:                   var(--font-weight-semibold);
     --h3-font-weight:                   var(--font-family-regular);
@@ -154,6 +162,10 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --h5-font-weight:                   var(--font-family-regular);
     --h6-font-weight:                   var(--font-family-regular);
     --body-font-weight:                 var(--font-weight-regular);
+
+    //text transform
+    --text-transform-base:              none; 
+    --text-transform-body:              none;
 
 
     /*----Standard spacing values----*/
@@ -207,8 +219,8 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --aside-panel-link-border:          #f4f4f4;
     --aside-panel-link-active-color:    var(--brand-primary);
     --aside-panel-link-active-bg:       linear-gradient(140deg, rgba(101, 109, 249, 0.05) 50%, rgba(238, 99, 144, 0.05) 111%);//transparent;
-    --aside-panel-icon-active-color:    linear-gradient(143deg, var(--brand-primary) 50%, ~"color-mix(in srgb, var(--brand-primary), #000 60%)" 105%);
-    --aside-panel-link-active-indicator:linear-gradient(179deg, var(--brand-secondary) 50%, ~"color-mix(in srgb, var(--brand-secondary), #000 20%)" 111%);
+    --aside-panel-icon-active-color:    linear-gradient(143deg, var(--brand-primary) 50%, ~"color-mix(in srgb, var(--brand-primary), #000000 60%)" 105%);
+    --aside-panel-link-active-indicator:linear-gradient(179deg, var(--brand-secondary) 50%, ~"color-mix(in srgb, var(--brand-secondary), #000000 20%)" 111%);
 
     //page content
     --page-content-spacing:             ~"calc(var(--rule-space) * 6)" ~"calc(var(--rule-space) * 9)";//24px 36px
@@ -293,6 +305,11 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --btn-link-disabled-color:          transparent;
 
 
+    // navbar
+    --navbar-min-height:                50px;
+    --navbar-padding-vertical:          16px;
+
+
     //modal styles
     --modal-header-height:              ~"calc(var(--rule-space) * 15)";//60px
 
@@ -305,6 +322,12 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
 
     //DataTable/app-grid styles
     --app-grid-bg:                      rgba(255, 255, 255, 1);
+    --app-grid-header-text-color:       #888888;
+    --app-grid-header-border:           #f2f2f2;
+    --app-grid-header-bg:               linear-gradient(to top, #fbfbfb, #f4f4f4 19%);
+    --app-grid-border:                  #f0eaea;
+    --app-grid-text-color:              #35363b;
+    --app-grid-text-muted-color:        #838383;
     --app-grid-border-radius:           ~"calc(var(--rule-space) * 3)";//12px
     --app-grid-spacing:                 ~"calc(var(--rule-space) * 4)";//16px
 
@@ -316,7 +339,8 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
 
     //wizard(or)stepper styles
     --wizard-bg:                        #ffffff;
-
+    --wizard-line-height:               46px;
+    --wizard-border-width:              23px;
 
     /*----Media queries breakpoints----*/
     // Extra small screen / phone
