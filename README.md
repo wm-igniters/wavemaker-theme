@@ -13,14 +13,14 @@ You can check if you have Node and npm installed by typing:
 $ node --version && npm --version
 </pre>
 
-If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the .msi for Windows or .pkg for Mac from the [NodeJS website](https://nodejs.org/download/).
+If you need to upgrade or install Node, the easiest way is to use an installer for your platform. Download the .msi for Windows or .pkg for Mac from the [NodeJS](https://nodejs.org/download/).
 
 * Git
 You can check if you have Git installed by typing:
 <pre>
 $ git --version
 </pre>
-If you don't have Git, grab the installers from the [git website](http://git-scm.com/).
+If you don't have Git, grab the installers from the [git](http://git-scm.com/).
 
 
 Install Grunt & Bower
