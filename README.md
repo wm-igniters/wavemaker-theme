@@ -1,6 +1,6 @@
 INSTRUCTIONS
 ============
-With our handy tool, you can effortlessly generate themes for your WaveMaker web apps. Not only that, but you can also make dynamic theme changes during runtime, saving you time and effort. It's a simple yet effective way to enhance the look and feel of your web applications.
+Our handy tool allows you to generate themes for your WaveMaker web apps effortlessly. Not only that, but you can also make dynamic theme changes during runtime, saving you time and effort. It's a simple yet effective way to enhance the look and feel of your WaveMaker web apps in real time.
 
 
 Install Prerequisites
@@ -73,12 +73,12 @@ The default font for css-variables.less (src/web) is **Lexend** font, which can 
 
 Project Properties
 -----
-You can easily personalize your theme by changing its name. The default theme name is **Material Default**, but you can make it unique with a specified name. 
+Renaming your theme is a simple way to personalize it and make it your own. The default theme name is **Material Default**, but you can specify a unique name in the **.wmproject.properties** file.
 
 
 CSS Variables
 -----
-The CSS variables are located in the css-variables.less file within the src/web directory and can be modified for customizing themes. 
+The CSS variables are located in the css-variables.less file within the src/web directory, and can be modified to customize themes.. 
 
 
 Build
@@ -94,3 +94,4 @@ Run Time Theme change
 --------
 To change the theme during runtime, update the values for the specified CSS variables and append them to the root element.
 
+The default theme name is **Material Default**. You can specify a unique name in the **.wmproject.properties** file.
