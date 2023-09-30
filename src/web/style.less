@@ -459,7 +459,7 @@ html {
 
   .app-tabs {
     .box-shadow();
-    border-radius: var(--border-radius-large);
+    border-radius: var(--border-radius-base);
     li {
         > a {
             text-transform: var(--text-transform-body);
@@ -984,30 +984,29 @@ html {
   //Header
   //Header variables
   @wm-header-height: auto;
-  @wm-header-border-color: #979797;
 
   .app-header, .app-mobile-header {
     background-color: var(--header-bg);
     color: var(--header-text-color);
     // box-shadow: @wm-app-navbar-shadow;
-    // border-color: var(--header-border);
-    min-height: var(--header-height);
+    // border-color: var(--header-border-color);
+    min-height: var(--header-min-height);
     height: auto;
     z-index: 2;
-    box-shadow: 0 1px 0 0 var(--header-border);
+    box-shadow: 0 1px 0 0 var(--header-border-color);
     padding: var(--header-padding);
     .application-name {
     }
     .nav > li {
         a {
-          color: var(--headings-color);
+          color: var(--header-text-color);
           margin: .62em 0;
           i {
             font-size: 1.3em;
             line-height: normal;
           }
           &:focus, &:hover {
-            color: var(--brand-primary);
+            color: var(--header-active-text-color);
             background-color: transparent;
           }
         }
@@ -1023,7 +1022,7 @@ html {
             content: '';
             height: 70%;
             width: 1px;
-            background-color: var(--headings-color);
+            background-color: var(--header-border-color);
             position: absolute;
             left: 0;
             margin: .5em 0;
@@ -1034,7 +1033,7 @@ html {
         li {
             &.app-nav-item {
                 a {
-                     color: var(--headings-color);
+                     color: var(--header-text-color);
                 }
             }
         }
@@ -1118,7 +1117,7 @@ html {
     .app-search {
       //  background-color: @wm-header-bg-color;
        .form-control {
-        //  background-image: linear-gradient(var(--header-border), var(--header-border)), linear-gradient(@input-border, @input-border);
+        //  background-image: linear-gradient(var(--header-border-color), var(--header-border-color)), linear-gradient(@input-border, @input-border);
         //  color: var(--headings-color);
         //  &::-webkit-input-placeholder {
         //    color: var(--headings-color);
@@ -1177,7 +1176,7 @@ html {
             transition: color .3s ease;
           }
           &.active {
-            box-shadow: inset 0px -3px 0 0px var(--header-border);
+            box-shadow: inset 0px -3px 0 0px var(--brand-primary);
           }
         }
         &:last-child {
@@ -1483,8 +1482,8 @@ html {
         //for overriding the pills default color
         &.active {
           > a, .app-popover-wrapper a, .app-menu .dropdown-toggle {
-            color: var(--aside-panel-link-active-color);
-            background: var(--aside-panel-link-active-bg);
+            color: var(--aside-panel-text-active-color);
+            background: var(--aside-panel-text-active-bg);
             border-radius: @wm-navigation-panel-border-radius;
             &:hover, &:focus, &:active {
                color: var(--brand-primary);
@@ -1494,7 +1493,7 @@ html {
 
             &::after {
               content: '';
-              background-image: var(--aside-panel-link-active-indicator);
+              background-image: var(--aside-panel-text-active-indicator);
               height: 100%;
               width: 3px;
               position: absolute;
@@ -1528,7 +1527,7 @@ html {
           position: relative;
           width: 100%;
           // line-height: 1.7;
-          color: var(--aside-panel-link-color);
+          color: var(--aside-panel-text-color);
           min-height: 80px;
           display: flex;
           flex-direction: column;
@@ -1538,21 +1537,21 @@ html {
           text-shadow: none;
           text-align: center;
           font-weight: var(--font-weight-medium);
-          font-size: var(--aside-panel-link-size);//11px;
-          border-bottom: 1px solid var(--aside-panel-link-border);
+          font-size: var(--aside-panel-text-size);//11px;
+          border-bottom: 1px solid var(--aside-panel-text-border);
           border-radius: 0;
           &:hover, &:focus {
-            color: var(--aside-panel-link-active-color);
+            color: var(--aside-panel-text-active-color);
             opacity: 1;
             text-decoration: none;
             background-color: @wm-left-panel-link-hover-bg;
             .app-icon{
-              color: var(--aside-panel-link-active-color);
+              color: var(--aside-panel-text-active-color);
             }
           }
           &.active {
-            color: var(--aside-panel-link-active-color);
-            background: var(--aside-panel-link-active-bg);
+            color: var(--aside-panel-text-active-color);
+            background: var(--aside-panel-text-active-bg);
             border-radius: @wm-navigation-panel-border-radius;
             opacity: 1;
             &:hover, &:focus, &:active {
@@ -1562,7 +1561,7 @@ html {
             }
             &::after {
               content: '';
-              background-image: var(--aside-panel-link-active-indicator);
+              background-image: var(--aside-panel-text-active-indicator);
               height: 100%;
               width: 3px;
               position: absolute;
@@ -1611,7 +1610,7 @@ html {
             right: 8px;
             width: 6px;
             height: 6px;
-            border: 1px solid var(--aside-panel-link-color) !important;
+            border: 1px solid var(--aside-panel-text-color) !important;
             border-right: 0 !important;
             border-top: 0 !important;
             background: transparent;
@@ -1642,7 +1641,7 @@ html {
                 a {
                   opacity: 1;
                   &:hover, &:focus {
-                     background-color: var(--aside-panel-link-active-bg);
+                     background-color: var(--aside-panel-text-active-bg);
                   }
                 }
               }
@@ -1657,7 +1656,7 @@ html {
       margin-top: 1em;
       .input-group-addon {
         padding: .2em 1em;
-        color: var(--aside-panel-link-color);
+        color: var(--aside-panel-text-color);
       }
     }
   }
@@ -1761,7 +1760,9 @@ html {
   @wm-input-field-padding: 0 .5em;
   //for text, select controls
   .form-control, .form-group + .form-control {
-    font-size: var(--h4);
+    height: var(--input-height-base);
+    font-size: var(--input-font-base);
+    background: var(--input-bg);
     // color: var(--text-color);
     // border: 0;
     //padding: @padding-base-vertical 0; //end to end input fields
@@ -2554,7 +2555,7 @@ html {
     }
     .app-wizard-steps {
       .box-shadow();
-      border-radius: var(--border-radius-large);
+      border-radius: var(--border-radius-base);
       // overflow: hidden;
       .app-wizard-step:not(:last-child) {
           &.active .arrow {
@@ -2709,6 +2710,7 @@ html {
                     margin-top: ~"calc(var(--rule-space) * -1)";
                     .count{
                       color: var(--text-invert);
+                      top: auto;
                     }
                     .app-icon {
                       color: var(--text-invert);
@@ -2773,11 +2775,11 @@ html {
                   top: (@padding-base-vertical * 2);
                 }
                 .wizard-step-number {
-                  left: 0;
+                  left: 0 !important;
                   top: 6px;
                 }
                 a {
-                  padding: 0 0 0 (@padding-base-horizontal * 2.4);//48px
+                  padding: 0 0 0 (@padding-base-horizontal * 2.4) !important;//48px
                   margin: 0 0 (@padding-base-vertical * 4) 0;//48px
                 }
               }
@@ -2961,7 +2963,7 @@ html {
   @wm-panel-action-font: 1.15em;
 
   .panel, .card {
-    border-radius: var(--border-radius-large);
+    border-radius: var(--border-radius-base);
     border-color: transparent;
     border: 0;
     .box-shadow();
@@ -2971,7 +2973,7 @@ html {
         background: var(--brand-secondary);
     }
     .panel-heading {
-        h3.panel-title {
+        .panel-title {
           //  margin-top: @padding-large-vertical;
           font-weight: var(--font-weight-medium);
           font-size: var(--h4);
@@ -3052,8 +3054,8 @@ html {
     }
     &.panel-* {
         .panel-heading {
-            border-top-left-radius: var(--border-radius-large);
-            border-top-right-radius: var(--border-radius-large);
+            border-top-left-radius: var(--border-radius-base);
+            border-top-right-radius: var(--border-radius-base);
         }
     }
   }
@@ -3172,7 +3174,7 @@ html {
         border-width: 0;
         border-color: transparent;
         // box-shadow: 0 20px 30px 0 rgba(103, 103, 103, 0.06);
-        border-radius: var(--border-radius-large);
+        border-radius: var(--border-radius-base);
         box-shadow: 0 30px 70px 0 rgba(181, 190, 199, 0.15);
       }
       &:hover{
@@ -3694,7 +3696,7 @@ html {
   //stylings for tile widget
   .app-tile {
     .box-shadow();
-    border-radius: var(--border-radius-large);
+    border-radius: var(--border-radius-base);
     padding: var(--space-xl);
     display: block;
     // flex-direction: column;
@@ -4336,10 +4338,18 @@ html {
 /***color picker class: adding the default size and padding to the addon*******/
   .app-colorpicker {
     &.input-group {
-      width: 13em;
+      // width: 13em;
     }
     .input-group-addon {
-      height: 98%;
+      height: 24px;
+      width: 24px;
+      padding: 0;
+      border-radius: 50%;
+      overflow: hidden;
+      top: 8px;
+      right: 8px;
+      font-size: 0;
+      box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.75);
     }
   }
   .app-date.input-group {
@@ -4445,8 +4455,6 @@ html {
     /**Custom Variables Primary to Secondary color override
         Border settings and Spacing switch
     **/
-    @navbar-default-link-active-color: var(--brand-secondary);
-    @wm-header-border-color: var(--header-border);
 
     // App header icons color override to Secondary
     .app-header, .app-mobile-header {
@@ -4477,7 +4485,7 @@ html {
         //header search
         .app-search {
            .form-control {
-            //  background-image: linear-gradient(var(--header-border), var(--header-border)), linear-gradient(@input-border, @input-border);
+            //  background-image: linear-gradient(var(--header-border-color), var(--header-border-color)), linear-gradient(@input-border, @input-border);
            }
         }
       }
@@ -4488,13 +4496,13 @@ html {
     //         li, .app-nav-item {
     //             &.active {
     //               > a, .app-popover-wrapper a, .app-menu .dropdown-toggle {
-    //                     background: var(--aside-panel-link-active-bg);
+    //                     background: var(--aside-panel-text-active-bg);
     //                     color: @wm-left-panel-link-active-color;
     //                     border-left: 0;
     //                     opacity: 1;
     //                     border-radius: @wm-navigation-panel-border-radius;
     //                 &:hover, &:focus, &:active {
-    //                     background: var(--aside-panel-link-active-bg);
+    //                     background: var(--aside-panel-text-active-bg);
     //                     color: @wm-left-panel-link-active-color;
     //                 }
     //               }
@@ -4517,30 +4525,30 @@ html {
     // }
 
     // Navbar color primary to secondary override & Spacing
-    .app-navbar {
-        &.navbar{
-            min-height: var(--navbar-min-height); //Space switch
-        }
-        .navbar-brand { //Space switch
-            height: var(--navbar-min-height);
-            padding-top: var(--navbar-padding-vertical);
-            padding-bottom: var(--navbar-padding-vertical);
-        }
-        .navbar-nav {
-            li {
-                &.active .app-popover-wrapper a, &.active a {
-                    color: @navbar-default-link-active-color;
-                }
-                a, .app-popover-wrapper a {
-                    padding-top: var(--navbar-padding-vertical);
-                    padding-bottom: var(--navbar-padding-vertical);
-                  &.active {
-                    box-shadow: inset 0px -3px 0 0px var(--header-border);
-                  }
-                }
-            }
-        }
-    }
+    // .app-navbar {
+    //     &.navbar{
+    //         min-height: var(--navbar-min-height); //Space switch
+    //     }
+    //     .navbar-brand { //Space switch
+    //         height: var(--navbar-min-height);
+    //         padding-top: var(--navbar-padding-vertical);
+    //         padding-bottom: var(--navbar-padding-vertical);
+    //     }
+    //     .navbar-nav {
+    //         li {
+    //             &.active .app-popover-wrapper a, &.active a {
+    //                 color: @navbar-default-link-active-color;
+    //             }
+    //             a, .app-popover-wrapper a {
+    //                 padding-top: var(--navbar-padding-vertical);
+    //                 padding-bottom: var(--navbar-padding-vertical);
+    //               &.active {
+    //                 box-shadow: inset 0px -3px 0 0px var(--header-border-color);
+    //               }
+    //             }
+    //         }
+    //     }
+    // }
 
     //Tree
     .app-tree {
@@ -4740,13 +4748,13 @@ html {
    //Panel
 
    .panel-heading {
-       border-top-right-radius: var(--border-radius-large);
-       border-top-left-radius: var(--border-radius-large);
+       border-top-right-radius: var(--border-radius-base);
+       border-top-left-radius: var(--border-radius-base);
    }
 
    .panel-footer {
-       border-bottom-right-radius: var(--border-radius-large);
-       border-bottom-left-radius: var(--border-radius-large);
+       border-bottom-right-radius: var(--border-radius-base);
+       border-bottom-left-radius: var(--border-radius-base);
    }
 
    .alert {
@@ -4755,14 +4763,14 @@ html {
 
    // Modal
    .modal-content {
-      border-radius: var(--border-radius-large);
+      border-radius: var(--border-radius-base);
       box-shadow: 0 30px 120px 0 rgba(181, 190, 199, 0.4);
       border: none;
    }
 
    .modal-header {
-      // border-top-right-radius: var(--border-radius-large);
-      // border-top-left-radius: var(--border-radius-large);
+      // border-top-right-radius: var(--border-radius-base);
+      // border-top-left-radius: var(--border-radius-base);
    }
    .modal-dialog{//dialog vertically and horizontally center
     display: flex;
@@ -4878,7 +4886,7 @@ html {
   // .app-left-panel, .app-right-panel {
   //   .app-search {
   //     .form-control, .input-group-addon {
-  //         background: var(--aside-panel-link-active-bg);
+  //         background: var(--aside-panel-text-active-bg);
   //         border-color: transparent;
   //         border-top-left-radius: var(--border-radius-base);
   //         border-bottom-left-radius: var(--border-radius-base);
@@ -6220,12 +6228,12 @@ html {
 
   .modal-lg {
     .app-wizard .app-wizard-steps {
-        border-top-left-radius: var(--border-radius-large);
-        border-top-right-radius: var(--border-radius-large);
+        border-top-left-radius: var(--border-radius-base);
+        border-top-right-radius: var(--border-radius-base);
     }
     .app-wizard .app-footer {
-        border-bottom-left-radius: var(--border-radius-large);
-        border-bottom-right-radius: var(--border-radius-large);
+        border-bottom-left-radius: var(--border-radius-base);
+        border-bottom-right-radius: var(--border-radius-base);
     }
     .app-wizard .app-wizard-body .app-wizard-step-content {
         width: 70%;
@@ -6274,7 +6282,7 @@ html {
   }
   .app-container{
     &.app-card{
-      border-radius: var(--border-radius-large);
+      border-radius: var(--border-radius-base);
       padding: 2.25em;
       box-shadow: 0 20px 100px 0 rgba(181, 190, 199, 0.4);
       background-color: @panel-bg;
@@ -6641,7 +6649,7 @@ html {
   }
 
   .add-goal-panel {
-    border-radius: var(--border-radius-large);
+    border-radius: var(--border-radius-base);
     border: dashed 1px var(--border-color-2);
     background-image: linear-gradient(228deg, #fafbfc, #f3f6f9);
     min-height: 320px;

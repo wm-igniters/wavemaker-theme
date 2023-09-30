@@ -8,9 +8,58 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
 // ex: ~"color-mix(in srgb, color1 50%, color2 30%)" instead of color-mix(in srgb, color1 50%, color2 30%) //
 =========*/
 :root{
+    /* Source-Start */
+    --brand-primary:                    rgba(101, 109, 249, 1);//Primary, color
+    --brand-secondary:                  rgba(255, 150, 66, 1);//Secondary, color
+    --brand-tertiary:                   rgba(255, 216, 141, 1);//Tertiary, color
+    --brand-success:                    #77CF33;//Success, color
+    --brand-info:                       #00a2ff;//Info, color
+    --brand-warning:                    #ff8650;//Warning, color
+    --brand-danger:                     #ec477c;//Danger, color
+    --default-bg:                       #ffffff;//Default Background Color, color
+    --default-text-color:               #8c8d91;//Default Text Color, color
+    --default-border:                   #8c8d91;//Default Border Color, color
+    --brand-disabled-bg:                #D4D4D4;//Disabled Background Color, color
+    --brand-disabled-text:              #333333;//Disabled Text Color, color
+    --body-bg:                          rgba(250, 251, 254, 1);//Body Background Color, color
+    --text-color:                       rgba(31, 43, 87, 1);//Text Color, color
+    --text-muted:                       rgba(31, 43, 87, 0.5);//Text Muted Color, color
+    --text-invert:                      rgba(255, 255, 255, 1);//Text Invert Color, color
+    --headings-color:                   rgba(31, 43, 87, 1);//Headings Color, color
+    --link-color:                       #2c5ccc;//Link Color, color
+    --logo-height:                      40px;//Logo Height, text
+    --header-min-height:                84px;//Header Min-Height, text
+    --header-bg:                        #FFFFFF;//Header Background, text
+    --header-text-color:                rgba(31, 43, 87, 0.7);//Header Text Color, color
+    --header-border-color:              rgba(151, 151, 151, 0.2);//Header Border Color, color
+    --header-active-text-color:         rgba(101, 109, 249, 1);//Header Active Text Color, color
+    --aside-panel-bg:                   #ffffff;//Left Background, color
+    --aside-panel-border:               rgba(245, 245, 247, 1);//Left Border Color, color
+    --aside-panel-text-size:            12px;//Left Text Size, text
+    --aside-panel-text-color:           rgba(31, 43, 87, 0.7);//Left Text Color, color
+    --aside-panel-icon-size:            24px;//Left Icon Size, text
+    --aside-panel-icon-color:           rgba(134, 140, 161, 1);//Left Icon Color, color
+    --aside-panel-text-border:          #f4f4f4;//Left Text Border, color
+    --aside-panel-text-active-color:    var(--brand-primary);//Left Text Active Color, text
+    --aside-panel-text-active-bg:       linear-gradient(140deg, rgba(101, 109, 249, 0.05) 50%, rgba(238, 99, 144, 0.05) 111%);//Left Active Background, text
+    --aside-panel-icon-active-color:    linear-gradient(143deg, var(--brand-primary) 50%, ~'color-mix(in srgb, var(--brand-primary), #000000 60%)' 105%);//Left Icon Active Color, text
+    --aside-panel-text-active-indicator:linear-gradient(179deg, var(--brand-secondary) 50%, ~'color-mix(in srgb, var(--brand-secondary), #000000 20%)' 111%);//Left Active Indicator Color, text
+    --h1:                               3.375rem;//H1 Font Size, text
+    --h2:                               2.25rem;//H2 Font Size, text
+    --h3:                               1.5rem;//H3 Font Size, text
+    --h4:                               1.125rem;//H4 Font Size, text
+    --h5:                               0.9375rem;//H5 Font Size, text
+    --h6:                               0.8125rem;//H6 Font Size, text
+    --font-size-base:                   0.8125rem;//Base Font Size, text
+    --font-family:                      'Lexend', sans-serif;//Font Family, text
+    --input-height-base:                44px;//Input Height, text
+    --input-font-base:                  var(--h5);//Input Font Size, text
+    --input-border-color:               #888888;//Input Border Color, color
+    --input-bg:                         #FFFFFF;//Input Background Color, color
+    --btn-height-base:                  44px;//Button Height, text
+    /* Source-End */
     /*----standard color variables------*/
     //primary
-    --brand-primary:                    rgba(101, 109, 249, 1);
     --brand-primary-lighten:            ~"color-mix(in srgb, var(--brand-primary), #ffffff 20%)";
     --brand-primary-darken:             ~"color-mix(in srgb, var(--brand-primary), #000000 30%)";
     --brand-primary-o:                  ~"color-mix(in srgb, var(--brand-primary), transparent 88%)";
@@ -19,7 +68,6 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --primary-label-border:             rgba(255, 255, 255, 0.4);
 
     //secondary
-    --brand-secondary:                  rgba(255, 150, 66, 1);
     --brand-secondary-lighten:          ~"color-mix(in srgb, var(--brand-secondary), #ffffff 20%)";
     --brand-secondary-darken:           ~"color-mix(in srgb, var(--brand-secondary), #000000 30%)";
     --brand-secondary-o:                ~"color-mix(in srgb, var(--brand-secondary), transparent 90%)";
@@ -30,56 +78,41 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --secondary-text-gradient:          var(--secondary-bg-gradient);
 
     //tertiary
-    --brand-tertiary:                   rgba(255, 216, 141, 1);
     --brand-tertiary-text:              rgba(244, 177, 49, 1);
     --brand-tertiary-bg:                #ffffff;//rgba(255, 216, 141, 0.2);
     --brand-tertiary-bg-active:         rgba(255, 216, 141, 1);
     --brand-tertiary-border:            var(--brand-tertiary);
 
     //success
-    --brand-success:                    #77CF33;
     --brand-success-o:                  rgba(8, 197, 138, 0.1);
     --brand-success2:                   #77CF33;
     --success-bg-text:                  rgba(255, 255, 255, 1);
 
     //info
-    --brand-info:                       #00a2ff;
     --brand-info-o:                     rgba(118, 132, 252, 0.1);
     --brand-info2:                      #51aaf2;
     --brand-info2-o:                    #97afff;
     --info-bg-text:                     rgba(255, 255, 255, 1);
 
     //warning
-    --brand-warning:                    #ff8650;
     --brand-warning-o:                  rgba(255, 134, 80, 0.1);
     --brand-warning2:                   #da591d;
     --brand-warning2-o:                 rgba(206, 84, 27, 0.1);
     --warning-bg-text:                  rgba(255, 255, 255, 1);
+
     //danger
-    --brand-danger:                     #ec477c;
     --brand-danger2:                    #fb587b;
     --brand-danger2-o:                  rgba(251, 88, 123, 0.1);
     --danger-bg-text:                   rgba(255, 255, 255, 1);
 
     //default
-    --brand-default:                    #ffffff;
-    --default-bg-text:                  #979aa4;
-    --default-border:                   #c5c7ce;
 
     //disabled
-    --brand-disabled-bg:                #D4D4D4;
-    --brand-disabled-text:              #333333;
 
     //basic colors
-    --body-bg:                          rgba(250, 251, 254, 1);
-    --text-color:                       rgba(31, 43, 87, 1);
-    --text-muted:                       rgba(31, 43, 87, 0.5);
-    --text-invert:                      rgba(255, 255, 255, 1);
-    --headings-color:                   rgba(31, 43, 87, 1);
     --subheading-color:                 ~"color-mix(in srgb, var(--headings-color), transparent 60%)";
 
     //** Global textual link.
-    --link-color:                       #2c5ccc;
     --link-hover-color:                 ~"color-mix(in srgb, var(--link-color), #000000 20%)";
 
     //** state colors
@@ -113,19 +146,12 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
 
     /*----font size, line height, custom icon sizes variables----*/
     //== font sizes
-    --h1:                               3.375rem;//54px;
     --h1-line-height:                   4.625rem;//74px;
-    --h2:                               2.25rem;//36px;
     --h2-line-height:                   3.125rem;//50px;
-    --h3:                               1.5rem;//24px;
     --h3-line-height:                   2.25rem;//36px;
-    --h4:                               1.125rem;//18px;
     --h4-line-height:                   1.6875rem;//27px;
-    --h5:                               0.9375rem;//15px;
     --h5-line-height:                   1.375rem;//22px;
-    --h6:                               0.8125rem;//13px;
     --h6-line-height:                   1.25rem;//20px;
-    --font-size-base:                   0.8125rem;//13px;
     --font-size-base-line-height:       1.2188rem;//19.5px;
     --large:                            1.25rem;//20px;
     --large-line-height:                2rem;//32px;
@@ -184,20 +210,9 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --border-radius-large:              ~"calc(var(--border-radius-base) * 2)";//24px
     --border-radius-small:              ~"calc(var(--border-radius-base) * 0.5)";//6px
 
-
-    /*----picture/image sizes----*/
-    --logo-height:                      ~"calc(var(--rule-space) * 10)";//40px
-
     /*----layouts/widgets/elements specific variables----*/
     //header 
-    --header-height:                    ~"calc(var(--rule-space) * 21)";// 84px;
     --header-padding:                   var(--space-md) var(--space-lg);
-    --header-bg:                        #FFFFFF;
-    --header-text-color:                rgba(31, 43, 87, 0.7);
-    --header-icon-color:                rgba(31, 43, 87, 1);
-    --header-active-text-color:         var(--brand-primary);
-    --header-active-icon-color:         var(--brand-primary);
-    --header-border:                    rgba(151, 151, 151, 0.2);
 
     //footer 
     --footer-height:                    auto;// ~"calc(var(--rule-space) * 4)";// 40px;
@@ -208,19 +223,6 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --footer-active-text-color:         var(--brand-primary);
     --footer-active-icon-color:         var(--brand-primary);
     --footer-border:                    rgba(151, 151, 151, 0.2);
-
-    //aside left and right panel
-    --aside-panel-bg:                   #ffffff;
-    --aside-panel-border:               rgba(245, 245, 247, 1);
-    --aside-panel-link-size:            12px;
-    --aside-panel-link-color:           rgba(31, 43, 87, 0.7);
-    --aside-panel-icon-size:            24px;
-    --aside-panel-icon-color:           rgba(134, 140, 161, 1);
-    --aside-panel-link-border:          #f4f4f4;
-    --aside-panel-link-active-color:    var(--brand-primary);
-    --aside-panel-link-active-bg:       linear-gradient(140deg, rgba(101, 109, 249, 0.05) 50%, rgba(238, 99, 144, 0.05) 111%);//transparent;
-    --aside-panel-icon-active-color:    linear-gradient(143deg, var(--brand-primary) 50%, ~"color-mix(in srgb, var(--brand-primary), #000000 60%)" 105%);
-    --aside-panel-link-active-indicator:linear-gradient(179deg, var(--brand-secondary) 50%, ~"color-mix(in srgb, var(--brand-secondary), #000000 20%)" 111%);
 
     //page content
     --page-content-spacing:             ~"calc(var(--rule-space) * 6)" ~"calc(var(--rule-space) * 9)";//24px 36px
@@ -247,8 +249,6 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
     --widget-2-any-spacing:             ~"calc(var(--rule-space) * 4)";//16px
 
     //input variables
-    --input-height-base:                ~"calc(var(--rule-space) * 11)";//44px
-    --input-font-base:                  var(--h5);//15px
     --input-height-large:               ~"calc(var(--rule-space) * 14)";//56px;
     --input-height-small:               ~"calc(var(--rule-space) * 8)";//32px
     --input-spacing:                    ~"calc(var(--rule-space) * 2)" ~"calc(var(--rule-space) * 4)";//8px 16px
@@ -274,9 +274,9 @@ ex: color-mix(in srgb, color1 50%, color2 30%)
 
     --btn-font-weight:                  var(--font-weight-regular);
 
-    --btn-default-color:                #8c8d91;//@text-color;
-    --btn-default-bg:                   #fff;
-    --btn-default-border:               #8c8d91;
+    --btn-default-color:                var(--default-text-color);//@text-color;
+    --btn-default-bg:                   var(--default-bg);
+    --btn-default-border:               var(var(--default-border));
 
     --btn-primary-color:                #fff;
     --btn-primary-bg:                   var(--brand-primary);
